@@ -15,6 +15,7 @@ y1list = [1]
 y2list = [0]
 y3list = [0]
 y4list = [1]
+y5list = [1]
 for i in range(1,11):
     p1 = (1 + i*r);
     n1 = (t + c*p1*n0)/p1;
@@ -27,19 +28,21 @@ for i in range(1,11):
     tt += amt0 - amt1;
     y3list.append(tt)
     y4list.append(amt1 + tt)
+    y5list.append(1 + tt)
     print("initial " + str(amt0) + ", final " +
         str(amt1) + ", takeout " + str(amt0 - amt1) + ", total takeout " + str(tt) + 
-        ", price " + str(p1) + " times, total amt " + str(amt1 + tt));
+        ", price " + str(p1) + " times, total amt " + str(amt1 + tt) + ", exit liquidity amountt " + str(1 + tt));
     print();
     p0 = p1;
     n0 = n1;
 print("------------end-----------------")
 print()
-plt.plot(xlist, y0list, label = "initial")
-plt.plot(xlist, y1list, label = "final after takeout")
-plt.scatter(xlist, y3list, label = "total takeout")
-plt.scatter(xlist, y4list, label = "total amount")
+plt.scatter(xlist, y0list, label = "initial")
+plt.scatter(xlist, y1list, label = "final after takeout")
 plt.scatter(xlist, y2list, label = "takeout")
+plt.plot(xlist, y3list, label = "total takeout")
+plt.plot(xlist, y4list, label = "total amount")
+plt.plot(xlist, y5list, label = "exit liquidity amount")
 plt.title("return = " + str(r) + ", takeout = " + str(t))
 plt.legend()
 plt.show()
