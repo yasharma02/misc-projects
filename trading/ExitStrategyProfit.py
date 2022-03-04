@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 p0 = 1;
 n0 = 1;
 r = 0.5;
-t = 0.5;
+t = 0.25;
 c = 1 - t;
 tt = 0;
 print()
