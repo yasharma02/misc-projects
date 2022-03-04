@@ -21,6 +21,6 @@ async def on_message(message):
         channeltosend = bot.get_channel(channel2id)
         await channeltosend.send(message.content)
 
-bot.run("OTM5NDY4MTk5MTkwMjMzMTU4.Yf5R8Q.SrzKHHbqOXo6Tslryp4Lbq-q1iU")
+bot.run("OTM5NDY4MTk5MTkwMjMzMTU4")
 
 # , embed=message.embeds[0]
